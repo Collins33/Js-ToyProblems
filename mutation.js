@@ -1,23 +1,13 @@
 //return true if all letters in second value are in the second value
 function mutations(arr) {
-  var first = arr[0];
-  var second = arr[1]
-  var final = []
-  for (var i = 0; i < second.length; i++) {
-    for (var v = 0; v < first.length; v++) {
-      if (second[i] === first[v]) {
-        final.push("true")
-      }
-    }
+  var test = arr[1].toLowerCase();
+  var target = arr[0].toLowerCase();
+  for (i=0;i<test.length;i++) {
+    if (target.indexOf(test[i]) === -1)
+      console.log("false");
   }
-
-  if (final.length >= second.length) {
-    console.log("true")
-  } else {
-    console.log("false")
-  }
-  // console.log(final)
-}
+  console.log("true");
+ }
 mutations(["voodoo", "no"])
 
 
